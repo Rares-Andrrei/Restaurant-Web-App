@@ -1,0 +1,12 @@
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\bin\Debug\net6.0\DataLayer.deps.json
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\bin\Debug\net6.0\DataLayer.dll
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\bin\Debug\net6.0\DataLayer.pdb
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.AssemblyInfoInputs.cache
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.AssemblyInfo.cs
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.csproj.CoreCompileInputs.cache
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.sourcelink.json
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.dll
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\refint\DataLayer.dll
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\DataLayer.pdb
+D:\Facultate\An3Sem1\DAW\Restaurant-Web-App\RestaurantBackend\DataLayer\obj\Debug\net6.0\ref\DataLayer.dll
