@@ -19,4 +19,8 @@ export class UserService {
   registerUser(registerData: RegisterForm) {
     return this.http.post<any>(this.baseUrl + "/register", registerData);
   }
+
+  // validateUser(token: string) {
+  //   return this.http.get<any>(this.baseUrl + "/validate?token=" + token);
+  // }
 }

@@ -1,0 +1,15 @@
+
+    .description {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+      }
+      .description h2 {
+        margin-bottom: 30px;
+      }
+      .description p {
+        font-size: 18px;
+      }
+      .photo-grid img {
+        width: 100%;
+        margin-bottom: 20px;
+      }

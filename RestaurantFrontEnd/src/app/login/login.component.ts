@@ -29,7 +29,8 @@ export class LoginComponent {
 
     this.userService.loginUser(this.credentials).subscribe(r => {
       if (r.token) {
-        this.cookie.set("token", r.token);
+        //this.cookie.set("token", r.token);
+        localStorage.setItem("token", r.token);
         this.router.navigate(["/home"]);
       } else {
         this.infoMessage = "Accout not found"

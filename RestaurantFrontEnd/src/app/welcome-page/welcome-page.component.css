@@ -1,0 +1,17 @@
+
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+  }
+  
+   .jumbotron {
+    margin-bottom: 0;
+    background-image: url("../Images/homeBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+   }
+
+    .text-background {
+      background-color: rgba(0, 0, 0, 0.8);
+    }

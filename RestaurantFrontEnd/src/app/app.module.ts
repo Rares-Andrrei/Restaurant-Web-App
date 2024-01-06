@@ -9,13 +9,24 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ContactComponent } from './contact/contact.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { LoggedInHomePageComponent } from './logged-in-home-page/logged-in-home-page.component';
+import { AuthGuardService } from './services/auth-guard-service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavigationComponent,
+    ContactComponent,
+    UserInfoComponent,
+    WelcomePageComponent,
+    LoggedInHomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +34,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
