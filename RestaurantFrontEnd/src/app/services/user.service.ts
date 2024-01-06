@@ -20,7 +20,17 @@ export class UserService {
     return this.http.post<any>(this.baseUrl + "/register", registerData);
   }
 
-  // validateUser(token: string) {
-  //   return this.http.get<any>(this.baseUrl + "/validate?token=" + token);
-  // }
+  validateUser(token: string) {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get<any>(this.baseUrl + "/validateToken", { headers });
+  }
+
+  getUserInfo(token: string) {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.get<any>(this.baseUrl + "/getUsersInfo", { headers });
+  }
 }

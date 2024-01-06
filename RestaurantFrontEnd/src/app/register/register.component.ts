@@ -14,22 +14,32 @@ export class RegisterComponent {
 
    registerData : RegisterForm = {
     email: "",
-    phoneNumber: "",
     password: "",
     firstName: "",
     lastName: "",
+    phoneNumber: "",
     adress: "",
-    dateOfBirth: new Date(),
+    dateOfBirth: "",
    };
 
+   confirmPassword: string = "";
    infoMessage: string = "";
 
    constructor( private cookie: CookieService, private userService: UserService, private router: Router ){}
+
+   ngOnInit(): void {
+    this.router.navigate(['/Home']);
+  }
 
     registerUser(form: NgForm) {
 
       if (form.invalid) {
         this.infoMessage = "Please fill in all fields";
+        return;
+      }
+
+      if (this.registerData.password != this.confirmPassword) {
+        this.infoMessage = "Passwords do not match";
         return;
       }
 

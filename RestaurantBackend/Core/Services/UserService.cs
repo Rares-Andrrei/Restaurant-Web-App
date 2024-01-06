@@ -32,13 +32,13 @@ namespace Core.Services
 
             user = new User
             {
-               Email = registerData.Email,
-               PasswordHash = hashedPassword,
-               FirstName = registerData.FirstName,
-               LastName = registerData.LastName,
-               PhoneNumber = registerData.PhoneNumber,
-               Adress = registerData.Adress,
-               DateOfBirth = registerData.DateOfBirth
+                Email = registerData.Email,
+                PasswordHash = hashedPassword,
+                FirstName = registerData.FirstName,
+                LastName = registerData.LastName,
+                PhoneNumber = registerData.PhoneNumber,
+                Adress = registerData.Adress,
+                DateOfBirth = DateTime.Parse(registerData.DateOfBirth)
             };       
             
             unitOfWork.Users.Insert(user);
@@ -62,6 +62,20 @@ namespace Core.Services
             {
                 return null;
             }
+        }
+
+        public object GetUserInfo(int userId)
+        {
+            User user = unitOfWork.Users.GetById(userId);
+            return new UserInfoDto
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                BirthDay = user.DateOfBirth,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Adress = user.Adress
+            };
         }
     }
 }

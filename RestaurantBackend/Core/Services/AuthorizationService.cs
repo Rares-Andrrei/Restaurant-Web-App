@@ -42,7 +42,7 @@ namespace Core.Services
                 Issuer = "Backend",
                 Audience = "Frontend",
                 Subject = new ClaimsIdentity(new[] { idClaim, infoClaim }),
-                Expires = DateTime.Now.AddMinutes(5),
+                Expires = DateTime.Now.AddMinutes(10),
                 SigningCredentials = credentials
             };
 

@@ -21,7 +21,12 @@ export class LoginComponent {
 
   constructor( private cookie: CookieService, private userService: UserService, private router: Router ){}
 
+  ngOnInit(): void {
+    this.router.navigate(['/Home']);
+  }
+
   loginUser(form: NgForm) {
+    
     if (form.invalid) {
       this.infoMessage = "Please fill in all fields";
       return;
@@ -29,9 +34,10 @@ export class LoginComponent {
 
     this.userService.loginUser(this.credentials).subscribe(r => {
       if (r.token) {
-        //this.cookie.set("token", r.token);
         localStorage.setItem("token", r.token);
-        this.router.navigate(["/home"]);
+        this.credentials.email = "";
+        this.credentials.password = "";
+        this.router.navigate(["/Home"]);
       } else {
         this.infoMessage = "Accout not found"
       }

@@ -2,6 +2,7 @@
 using Core.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace RestaurantBackend.Controllers
 {
@@ -15,6 +16,12 @@ namespace RestaurantBackend.Controllers
         public UsersController(UserService userService)
         {
             this.userService = userService;
+        }
+
+        [HttpGet("validateToken")]
+        public IActionResult Validate()
+        {
+            return Ok(new { Status = "success"});
         }
 
         [HttpPost("register")]
@@ -36,6 +43,18 @@ namespace RestaurantBackend.Controllers
             var jwtToken = userService.Validate(payload);
 
             return Ok(new { token = jwtToken });
+        }
+
+        [HttpGet("getUsersInfo")]
+        public IActionResult GetUsersInfo()
+        {
+            ClaimsPrincipal user = User;
+
+            int userId = int.Parse(user.FindFirst("userId").Value);
+
+            var response = userService.GetUserInfo(userId);
+
+            return Ok(response);
         }
     }
 }

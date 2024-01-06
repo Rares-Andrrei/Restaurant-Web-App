@@ -6,7 +6,7 @@
   
    .jumbotron {
     margin-bottom: 0;
-    background-image: url("../Images/homeBackground.jpg");
+    background-image: url("../../assets/Images/homeBackground.jpg");
     background-size: cover;
     background-position: center;
     color: white;

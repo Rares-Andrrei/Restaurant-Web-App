@@ -1,8 +1,8 @@
 export interface UserInfo {
-    email: string;
     firstName: string;
     lastName: string;
+    birthDay: Date;
+    email: string;
     phoneNumber: string;
     adress: string;
-    dateOfBirth: Date;
 }

@@ -1,18 +1,27 @@
 import { Injectable } from "@angular/core";
 import { CanActivate, Router } from "@angular/router";
 import { CookieService } from "ngx-cookie-service";
+import { UserService } from "./user.service";
 
 @Injectable()
 export class AuthGuardService implements CanActivate{
 
-    constructor(private router: Router ) { }
+    constructor(private router: Router, private usersService: UserService ) { }
 
-    canActivate(): boolean {
-        if (localStorage.getItem('token')) {
-            return true;
-          } else {
-            this.router.navigate(['/Login']);
-            return false;
+    canActivate(): Promise<boolean> {
+      return new Promise<boolean>((resolve) => {
+        this.usersService.validateUser(localStorage.getItem('token') ?? '').subscribe(
+          (response) => {
+            if (response.status === 'success') {
+              resolve(true); // Allow navigation
+            } else {
+              resolve(false); // Prevent navigation
+            }
+          },
+          (error) => {
+            resolve(false); // Prevent navigation
           }
+        );
+      });
     }
 }

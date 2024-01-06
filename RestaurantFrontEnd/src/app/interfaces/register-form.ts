@@ -5,5 +5,5 @@ export interface RegisterForm {
     lastName: string;
     phoneNumber: string;
     adress: string;
-    dateOfBirth: Date;
+    dateOfBirth: string;
 }
