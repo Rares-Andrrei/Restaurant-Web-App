@@ -7,11 +7,13 @@ namespace DataLayer
         private readonly AppDbContext _dbContext;
 
         public UsersRepository Users { get; }
+        public ProductsRepository Products { get; }
 
-        public UnitOfWork(AppDbContext context,  UsersRepository usersRepository)
+        public UnitOfWork(AppDbContext context,  UsersRepository usersRepository, ProductsRepository productsRepository)
         {
             _dbContext = context;
             Users = usersRepository;
+            Products = productsRepository;
         }
         public void SaveChanges()
         {

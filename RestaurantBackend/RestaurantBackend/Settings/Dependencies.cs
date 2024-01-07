@@ -21,11 +21,13 @@ namespace RestaurantBackend.Settings
         {
             services.AddScoped<UserService>();
             services.AddScoped<AuthorizationService>();
+            services.AddScoped<ProductsService>();
         }
 
         private static void AddRepositories(IServiceCollection services)
         {
             services.AddScoped<UsersRepository>();
+            services.AddScoped<ProductsRepository>();
             services.AddScoped<UnitOfWork>();
         }
 

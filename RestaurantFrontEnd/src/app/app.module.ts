@@ -15,6 +15,9 @@ import { UserInfoComponent } from './user-info/user-info.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { LoggedInHomePageComponent } from './logged-in-home-page/logged-in-home-page.component';
 import { AuthGuardService } from './services/auth-guard-service';
+import { ProductsPageComponent } from './products-page/products-page.component';
+import { ProductComponent } from './product/product.component';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { AuthGuardService } from './services/auth-guard-service';
     ContactComponent,
     UserInfoComponent,
     WelcomePageComponent,
-    LoggedInHomePageComponent
+    LoggedInHomePageComponent,
+    ProductsPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,7 @@ import { AuthGuardService } from './services/auth-guard-service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService, AuthGuardService],
+  providers: [UserService, AuthGuardService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
