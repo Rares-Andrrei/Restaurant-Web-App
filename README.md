@@ -1,2 +1,2 @@
 # Restaurant Web App
- Building a restaurant web app using MySQL, HTML5+CSS3/ Bootstrap,  Javascript
+ Building a restaurant web app using MySQL, Angular and ASP .Net.
